@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { auth } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import Login from "./components/Login";
+import TodoList from "./components/TodoList";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -25,6 +26,7 @@ function App() {
           >
             Đăng xuất
           </button>
+          <TodoList />
         </div>
       ) : (
         <Login />
